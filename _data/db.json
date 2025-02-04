@@ -1,0 +1,159 @@
+{
+  "homeStats": [
+    {
+      "name": "Total Revenue",
+      "value": "$4.8m"
+    },
+    {
+      "name": "Luxury Suites Available",
+      "value": "24"
+    },
+    {
+      "name": "Total Amenities",
+      "value": "86"
+    },
+    {
+      "name": "Guest Reviews",
+      "value": "86k"
+    }
+  ],
+
+  "accomodationStats": [
+    {
+      "name": "Rooms Available",
+      "value": "50+"
+    },
+    {
+      "name": "5-Star Ratings",
+      "value": "4/5"
+    },
+    {
+      "name": "Activities",
+      "value": "20+"
+    },
+    {
+      "name": "Years of Service",
+      "value": "10"
+    }
+  ],
+
+  "diningStats": [
+    {
+      "name": "Gourmet Dishes",
+      "value": "50+"
+    },
+    {
+      "name": "Exquisite Wine Selection",
+      "value": "200+"
+    },
+    {
+      "name": "Dining Venues",
+      "value": "5"
+    },
+    {
+      "name": "Specialty Cuisines",
+      "value": "7"
+    }
+  ],
+
+  "offersStats": [
+    {
+      "name": "Luxurious Suites",
+      "value": "100+"
+    },
+    {
+      "name": "On-Site Activities",
+      "value": "20+"
+    },
+    {
+      "name": "Infinity Pools",
+      "value": "3"
+    },
+    {
+      "name": "Private Pools",
+      "value": "15+"
+    }
+  ],
+
+  "deals": [
+    {
+      "name": "Romantic Valentine's Escape",
+      "description": "Celebrate love with a luxurious getaway. Enjoy complimentary spa treatments, candlelit dinners, and breathtaking views to make your moments unforgettable.",
+      "date": "2025-02-01",
+      "month": "Feb 2025",
+      "image": "/images/pages/offers/valentines-deals.jpg"
+    },
+    {
+      "name": "Anniversary Celebration",
+      "description": "Join us in celebrating our resort's anniversary with exclusive perks! Enjoy special discounts, festive events, and delightful surprises throughout your stay.",
+      "date": "2025-07-01",
+      "month": "July 2025",
+      "image": "/images/pages/offers/anniversary-deals.jpg"
+    },
+    {
+      "name": "Enchanting Christmas",
+      "description": "Unwrap joy this holiday season with our exclusive Christmas package. Experience festive feasts, cozy accommodations, and magical winter activities.",
+      "date": "2025-12-01",
+      "month": "Dec 2025",
+      "image": "/images/pages/offers/christmas-deals.jpg"
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Paul Starr",
+      "image": "/images/users/men.jpg",
+      "rating": 5,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!"
+    },
+    {
+      "name": "Ann Curt",
+      "image": "/images/users/women.jpg",
+      "rating": 4,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia rerum quo unde neque atque molestias quas pariatur! Sint, maxime?"
+    },
+    {
+      "name": "Angel King",
+      "image": "/images/users/women.jpg",
+      "rating": 4,
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia rerum quo unde neque atque molestias quas pariatur! Sint, maxime?"
+    },
+    {
+      "name": "Maria Ann",
+      "image": "/images/users/women.jpg",
+      "rating": 5,
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, fuga?"
+    },
+    {
+      "name": "John Doe",
+      "image": "/images/users/men.jpg",
+      "rating": 4,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, itaque."
+    },
+    {
+      "name": "Luffy Great",
+      "image": "/images/users/men.jpg",
+      "rating": 3,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, itaque."
+    }
+  ],
+
+  "faqs": [
+    {
+      "question": "What time is check-in and check-out?",
+      "answer": "Check-in starts at 2:00 PM, and check-out is at 12:00 PM. Early check-in and late check-out are available upon request, subject to availability and additional charges."
+    },
+    {
+      "question": "Are pets allowed at the resort?",
+      "answer": "No, pets aren't allowed in the resort for some reasons."
+    },
+    {
+      "question": "Do you offer airport shuttle services?",
+      "answer": "No, we can't provide a shuttle services."
+    },
+    {
+      "question": "What activities are available at the resort?",
+      "answer": "Our resort offers a range of activities, including snorkeling, guided nature walks, spa treatments, and a kid's club. Seasonal events and activities are also organized throughout the year."
+    }
+  ]
+}
