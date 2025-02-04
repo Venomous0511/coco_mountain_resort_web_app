@@ -14,9 +14,10 @@ node --version
 
 You will see a v22.12.0 depends on your version installed.
 
-Next, Open the folder cocomountain-resort-app after you open it.
+
 
 Open it in VS code or you prefer Text Editor i prefer you use VS Code you can download it here [https://code.visualstudio.com/download].
+
 
 You will need to install the following:
 
