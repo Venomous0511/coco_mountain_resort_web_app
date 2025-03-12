@@ -155,5 +155,95 @@
       "question": "What activities are available at the resort?",
       "answer": "Our resort offers a range of activities, including snorkeling, guided nature walks, spa treatments, and a kid's club. Seasonal events and activities are also organized throughout the year."
     }
+  ],
+
+  "products": [
+    {
+      "name": "Cabana 1",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/Cabana.jpg",
+      "price": "₱ 1,000"
+    },
+    {
+      "name": "Cabana 2",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/Cabana2.jpg",
+      "price": "₱ 1,500"
+    },
+    {
+      "name": "Cabana Family",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/CabanaFamily.jpg",
+      "price": "₱ 2,000"
+    },
+    {
+      "name": "Cabana with Room",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/CabanaRoom.jpg",
+      "price": "₱ 2,000"
+    },
+    {
+      "name": "Nipa with Room",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/NipaRoom.jpg",
+      "price": "₱ 2,000"
+    },
+    {
+      "name": "Gazebo Table",
+      "href": "/login",
+      "imageSrc": "/images/ui/cottage/Gazebo.jpg",
+      "price": "₱ 800 per Table"
+    }
+  ],
+
+  "diningItems": [
+    {
+      "name": "Seafood Platter",
+      "imageSrc": "/images/pages/dining/seafood-platter.jpg",
+      "price": "₱ 1,200",
+      "category": "Main Course"
+    },
+    {
+      "name": "Grilled Steak",
+      "imageSrc": "/images/pages/dining/grilled-steak.jpg",
+      "price": "₱ 1,500",
+      "category": "Main Course"
+    },
+    {
+      "name": "Vegetarian Pizza",
+      "imageSrc": "/images/pages/dining/vegetarian-pizza.jpg",
+      "price": "₱ 800",
+      "category": "Main Course"
+    },
+    {
+      "name": "Pasta Alfredo",
+      "imageSrc": "/images/pages/dining/pasta-alfredo.jpg",
+      "price": "₱ 700",
+      "category": "Pasta"
+    },
+    {
+      "name": "Cake",
+      "imageSrc": "/images/pages/dining/cake.jpg",
+      "price": "₱ 600",
+      "category": "Dessert"
+    },
+    {
+      "name": "Coffee",
+      "imageSrc": "/images/pages/dining/coffee.jpg",
+      "price": "₱ 100",
+      "category": "Beverage"
+    },
+    {
+      "name": "Lemon Juice",
+      "imageSrc": "/images/pages/dining/lemon-juice.jpg",
+      "price": "₱ 100",
+      "category": "Beverage"
+    },
+    {
+      "name": "Wine",
+      "imageSrc": "/images/pages/dining/wine.jpg",
+      "price": "₱ 500",
+      "category": "Beverage"
+    }
   ]
 }

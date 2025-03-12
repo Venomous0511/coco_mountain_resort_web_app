@@ -1,17 +1,29 @@
 import Image from "next/image";
 
-// Async function that call the json data and revalidate every it refresh
+// Async function that calls the JSON data and revalidates every refresh
 async function getDeals() {
-  const res = await fetch("http://localhost:4000/deals", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/deals`, {
     next: {
       revalidate: 0,
     },
   });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch deals");
+  }
+
   return res.json();
 }
+
 export default async function Deals() {
-  // Calling the getDeals
-  const deals = await getDeals();
+  let deals = [];
+
+  try {
+    // Calling the getDeals
+    deals = await getDeals();
+  } catch (error) {
+    console.error("Error fetching deals:", error);
+  }
 
   return (
     <div
@@ -31,7 +43,7 @@ export default async function Deals() {
             src={deal.image}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="relative bg-gradient-to-t from-gray-900/60 to-gray-900/20 min-h-full pt-48 lg:pt-64 ">
+          <div className="relative bg-gradient-to-t from-gray-900/60 to-gray-900/20 min-h-full pt-48 lg:pt-64">
             <div className="p-6">
               <time
                 dateTime={deal.date}

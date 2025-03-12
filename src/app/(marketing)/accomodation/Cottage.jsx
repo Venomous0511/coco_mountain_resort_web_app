@@ -1,61 +1,43 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import ScrollReveal from "@/components/ui/useScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-
-// COTTAGES
-const products = [
-  {
-    name: "Cabana 1",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/Cabana.jpg",
-    price: "₱ 1,000",
-  },
-  {
-    name: "Cabana 2",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/Cabana2.jpg",
-    price: "₱ 1,500",
-  },
-  {
-    name: "Cabana Family",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/CabanaFamily.jpg",
-    price: "₱ 2,000",
-  },
-  {
-    name: "Cabana with Room",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/CabanaRoom.jpg",
-    price: "₱ 2,000",
-  },
-  {
-    name: "Nipa with Room",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/NipaRoom.jpg",
-    price: "₱ 2,000",
-  },
-  {
-    name: "Gazebo Table",
-    href: "/login",
-    imageSrc: "/images/ui/cottage/Gazebo.jpg",
-    price: "₱ 800 per Table",
-  },
-];
 
 export default function Cottage() {
-  // Variable for every items
   const ITEMS_PER_PAGE = 3;
 
-  // set a usestate
+  // States
   const [currentPage, setCurrentPage] = useState(1);
+  const [products, setProducts] = useState([]); // Store the products data
+  const [loading, setLoading] = useState(true); // To handle loading state
+  const [error, setError] = useState(null); // Handle error if data can't be fetched
 
-  // length for item pages
+  // Fetch the products data from db.json
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/products`
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Pagination logic
   const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
-
-  // Get the items for the current page
   const currentItems = products.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
@@ -77,7 +59,6 @@ export default function Cottage() {
           <h2 className="text-xl font-bold text-gray-900 dark:text-white sm:text-3xl">
             The Cottage Haven
           </h2>
-
           <p className="mt-4 max-w-md text-gray-500 dark:text-gray-400">
             A Tranquil Retreat Where Nature Meets Comfort, Offering You the
             Perfect Escape to Relax, Reconnect, and Rejuvenate
@@ -106,31 +87,40 @@ export default function Cottage() {
           },
         }}
       >
-        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {currentItems.map((product) => (
-            <li key={product.name}>
-              <Link href={product.href} className="group block overflow-hidden">
-                <Image
-                  src={product.imageSrc}
-                  alt={product.name}
-                  width={500}
-                  height={500}
-                  className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-                />
-                <div className="relative bg-white dark:bg-gray-900 pt-3">
-                  <h3 className="text-sm text-gray-700 dark:text-gray-300 group-hover:underline group-hover:underline-offset-4">
-                    {product.name}
-                  </h3>
-                  <p className="mt-2">
-                    <span className="tracking-wider text-gray-900 dark:text-white">
-                      {product.price}
-                    </span>
-                  </p>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>Error: {error}</div>
+        ) : (
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {currentItems.map((product) => (
+              <li key={product.name}>
+                <Link
+                  href={product.href}
+                  className="group block overflow-hidden"
+                >
+                  <Image
+                    src={product.imageSrc}
+                    alt={product.name}
+                    width={500}
+                    height={500}
+                    className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+                  />
+                  <div className="relative bg-white dark:bg-gray-900 pt-3">
+                    <h3 className="text-sm text-gray-700 dark:text-gray-300 group-hover:underline group-hover:underline-offset-4">
+                      {product.name}
+                    </h3>
+                    <p className="mt-2">
+                      <span className="tracking-wider text-gray-900 dark:text-white">
+                        {product.price}
+                      </span>
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <ol className="mt-8 flex justify-center gap-1 text-xs font-medium">
           <li>

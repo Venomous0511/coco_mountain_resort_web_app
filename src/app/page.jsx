@@ -42,7 +42,7 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-end items-center">
               <Link
-                href="/singup"
+                href="/signup"
                 className="block w-full rounded bg-green-600 px-12 py-3 text-sm font-semibold text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 md:w-auto"
               >
                 Get Started
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-full px-0 bg-gray-200 dark:bg-gray-700 sm:grid sm:grid-cols-2 sm:items-center">
+      <section className="max-w-full px-0 bg-gray-200 dark:bg-gray-800 sm:grid sm:grid-cols-2 sm:items-center">
         <ScrollReveal
           variants={{
             hidden: { opacity: 0, x: -50 },

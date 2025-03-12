@@ -1,18 +1,20 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function weatherIndicator() {
+// WeatherIndicator Component
+export default function WeatherIndicator() {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const LAT = "14.7298";
-  const LON = "121.15086";
-  const API_KEY = "f25d844f9a45b8995ff2eea57c5cd1fd";
+  const LAT = "14.7298"; // Latitude for your location
+  const LON = "121.15086"; // Longitude for your location
+  const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY; // Use environment variable
 
+  // Fetch weather data when component mounts
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -36,7 +38,7 @@ export default function weatherIndicator() {
     };
 
     fetchWeather();
-  }, []);
+  }, [API_KEY]);
 
   if (loading) return <div className="text-gray-500">Loading...</div>;
   if (error)
@@ -62,7 +64,7 @@ export default function weatherIndicator() {
           height={40}
         />
 
-        <span className="ms-8 text-base font-semibold text-white">
+        <span className="text-white text-base font-semibold">
           {weather.temp}°C
         </span>
       </motion.div>

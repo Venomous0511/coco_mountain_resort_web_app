@@ -1,10 +1,8 @@
 import { Righteous, Lora } from "next/font/google";
-
 import "@/styles/globals.css";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import ScrollUp from "@/components/ui/ScrollUp";
-
 
 const righteous = Righteous({
   subsets: ["latin"],
@@ -35,6 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>{/* Add any additional head elements here */}</head>
       <body
         className={`${lora.className} ${righteous.className} antialiased transition-colors duration-300`}
       >

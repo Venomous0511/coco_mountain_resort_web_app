@@ -1,23 +1,39 @@
-// Async function that call the json data and revalidate every it refresh
+// Async function that calls the JSON data and revalidates every time it refreshes
 async function getFaqs() {
-  const res = await fetch("http://localhost:4000/faqs", {
-    next: {
-      revalidate: 0,
-    },
-  });
-  return res.json();
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/faqs`, {
+      next: {
+        revalidate: 60, // Revalidate every 60 seconds
+      },
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch FAQs");
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching FAQs:", error);
+    return [];
+  }
 }
 
 export default async function FaqsList() {
-  // Calling the getFaqsList
+  // Calling the getFaqs
   const faqs = await getFaqs();
+
+  if (faqs.length === 0) {
+    return (
+      <p className="text-center text-gray-500 dark:text-gray-400">
+        No FAQs available at the moment.
+      </p>
+    );
+  }
 
   return (
     <div className="space-y-4">
       {faqs.map((faq, index) => (
         <details
           key={index}
-          className={`group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-gray-900`}
+          className="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-gray-900"
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-lg font-medium text-gray-900 dark:text-white">

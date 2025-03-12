@@ -1,27 +1,11 @@
 import ScrollReveal from "@/components/ui/useScrollReveal";
 import Image from "next/image";
 
-// CONTACT DETAILS BANNER
-const contactDetails = [
-  {
-    type: "Address",
-    value: "Lot 1, Block 8 Lolo Tinong San Rafael, Rodriguez, Philippines",
-  },
-  {
-    type: "Email",
-    value: "coco.mountain@yahoo.com",
-  },
-  {
-    type: "Hours",
-    value: "Open 24/7",
-  },
-];
-
 export default function Reach() {
   return (
     <>
       {/* BANNER */}
-      <section className="relative max-w-full h-screen isolate bg-white dark:bg-gray-900 m-0 pt-16 sm:pt-40">
+      <section className="relative max-w-full h-screen isolate bg-white dark:bg-gray-900 pt-16 sm:pt-40">
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -52,7 +36,7 @@ export default function Reach() {
             <h2 className="text-5xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-7xl">
               Plan Your Journey to Paradise
             </h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-600 dark:text-gray-300 sm:text-xl/8">
+            <p className="mt-8 text-lg font-medium text-gray-600 dark:text-gray-300 sm:text-xl">
               Reach us effortlessly and start your unforgettable getaway.
               Whether you're flying in or driving, our resort is conveniently
               located to make your arrival seamless and stress-free.
@@ -61,16 +45,32 @@ export default function Reach() {
 
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <dl className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-18 lg:mt-20">
-              {contactDetails.map((detail) => (
-                <div key={detail.type} className="flex flex-col-reverse gap-1">
-                  <dt className="text-xs lg:text-base/7 text-gray-600 dark:text-gray-300">
-                    {detail.type}
-                  </dt>
-                  <dd className="text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                    {detail.value}
-                  </dd>
-                </div>
-              ))}
+              <div className="flex flex-col-reverse gap-1">
+                <dt className="text-xs lg:text-base text-gray-600 dark:text-gray-300">
+                  Address
+                </dt>
+                <dd className="text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Lot 1, Block 8 Lolo Tinong San Rafael, Rodriguez, Philippines
+                </dd>
+              </div>
+
+              <div className="flex flex-col-reverse gap-1">
+                <dt className="text-xs lg:text-base text-gray-600 dark:text-gray-300">
+                  Email
+                </dt>
+                <dd className="text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  coco.mountain@yahoo.com
+                </dd>
+              </div>
+
+              <div className="flex flex-col-reverse gap-1">
+                <dt className="text-xs lg:text-base text-gray-600 dark:text-gray-300">
+                  Hours
+                </dt>
+                <dd className="text-lg lg:text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  Open 24/7
+                </dd>
+              </div>
             </dl>
           </div>
         </div>
@@ -98,6 +98,7 @@ export default function Reach() {
                 },
               }}
             >
+              {/* FOR DESKTOP VIEW */}
               <div className="hidden lg:relative lg:block lg:p-12">
                 <div className="block text-white">
                   <span className="sr-only">Home</span>
@@ -155,6 +156,7 @@ export default function Reach() {
                   },
                 }}
               >
+                {/* FOR MOBILE & TABLET VIEW */}
                 <div className="relative -mt-16 block lg:hidden">
                   <div className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20 dark:bg-gray-900">
                     <span className="sr-only">Home</span>

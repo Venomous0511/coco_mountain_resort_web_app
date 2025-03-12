@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Pills from "../atoms/Pills";
 import Button from "../atoms/Button";
 import Link from "next/link";
@@ -8,10 +8,24 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -40,11 +54,13 @@ export default function Navbar() {
           <Link href="/accomodation">Accomodation</Link>
           <Link href="/dining">Dining</Link>
           <Link href="/offers">Offers</Link>
-          <div className="relative p-0">
+          <div className="relative p-0" ref={dropdownRef}>
             <div className="inline-flex items-center overflow-hidden">
               <Button
                 onClick={toggleDropdown}
                 className="dark:text-slate-100 hover:text-green-700 hover:dark:text-green-500"
+                aria-haspopup="true"
+                aria-expanded={isOpen}
               >
                 <span className="sr-only">Gathering</span>
                 Gathering

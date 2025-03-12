@@ -14,27 +14,23 @@ export default function Meetings() {
           alt="Banner Image"
           className="absolute inset-0 w-full h-full object-cover"
         />
-
         <div className="absolute inset-0 bg-white/45 dark:bg-gray-900/75 md:bg-transparent md:from-white/55 dark:md:from-gray-900/75 md:to-white/0 dark:md:to-gray-900/10 md:bg-gradient-to-l"></div>
-
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:h-screen flex justify-center items-center">
           <div className="text-center">
             <h1 className="text-3xl italic font-extrabold text-green-700 dark:text-green-500 md:text-5xl">
               Unforgettable Experiences Await
             </h1>
-
-            <p className="mt-4 font-semibold italic text-gray-950 dark:text-white md:text-xl/relaxed">
+            <p className="mt-4 font-semibold italic text-gray-950 dark:text-white md:text-xl">
               Join us at Coco Mountain Resort for an array of rejuvenating
               events designed to refresh your spirit and connect you with
               nature. From wellness retreats to thrilling outdoor adventures,
-              there's something for everyone to enjoy
+              there's something for everyone to enjoy.
             </p>
           </div>
         </div>
       </section>
 
       {/* GET IN TOUCH */}
-
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
@@ -55,17 +51,14 @@ export default function Meetings() {
                 <p className="max-w-xl text-lg mt-5">
                   Tailored Recommendations for Unforgettable Experiences
                 </p>
-
                 <div className="mt-8">
                   <p className="font-bold pb-3">Get in Touch:</p>
-
                   <Link
                     href="tel:+639123456789"
                     className="text-2xl font-bold text-green-600"
                   >
                     +63 9123456789
                   </Link>
-
                   <address className="mt-2 not-italic">
                     Lot 1, Block 8 Lolo Tinong San Rafael, Rodriguez,
                     Philippines
@@ -89,30 +82,30 @@ export default function Meetings() {
                   <div className="grid grid-cols-1 gap-7">
                     <label htmlFor="email" className="relative block">
                       <input
-                        type="text"
+                        type="email"
                         id="email"
                         className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                        placeholder="email"
+                        placeholder="Email"
+                        required
                       />
-
                       <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                        Email <span className="text-xs">{"(required)"}</span>
+                        Email <span className="text-xs">(required)</span>
                       </span>
                     </label>
 
-                    <label htmlFor="lastName" className="relative block">
+                    <label htmlFor="message" className="relative block">
                       <textarea
-                        id="subject"
-                        rows="5"
+                        id="message"
+                        rows={5}
                         className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
+                        placeholder="Message"
+                        required
                       ></textarea>
-
                       <span className="pointer-events-none absolute start-2.5 top-1/2 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                        Message <span className="text-xs">{"(required)"}</span>
+                        Message <span className="text-xs">(required)</span>
                       </span>
                     </label>
                   </div>
-
                   <div className="mt-4">
                     <button
                       type="submit"

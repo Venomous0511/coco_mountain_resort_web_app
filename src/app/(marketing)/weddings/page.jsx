@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ui/useScrollReveal";
+import InputField from "./InputField";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,19 +10,20 @@ export default function Weddings() {
       <section className="relative max-w-full h-screen isolate bg-white dark:bg-gray-900 m-0 p-0 pt-10 md:pt-20">
         <div className="max-w-full h-screen m-0 p-0">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-8 items-center">
-            <div className="aspect-square w-full flex justify-center hidden lg:flex">
+            {/* Bride Image */}
+            <div className="aspect-square w-full justify-center hidden lg:flex">
               <ScrollReveal
                 variants={{
                   hidden: { opacity: 0, x: -200 },
                   visible: {
                     opacity: 1,
-                    x: 1,
+                    x: 0,
                     transition: { duration: 0.5, delay: 0.4 },
                   },
                 }}
               >
                 <Image
-                  src={"/images/pages/weddings/bride.jpg"}
+                  src="/images/pages/weddings/bride.jpg"
                   width={1080}
                   height={1080}
                   className="object-cover w-full lg:h-full"
@@ -30,6 +32,7 @@ export default function Weddings() {
               </ScrollReveal>
             </div>
 
+            {/* Couple Image */}
             <div className="aspect-video w-full lg:col-span-2">
               <ScrollReveal
                 variants={{
@@ -42,7 +45,7 @@ export default function Weddings() {
                 }}
               >
                 <Image
-                  src={"/images/pages/weddings/couple.jpg"}
+                  src="/images/pages/weddings/couple.jpg"
                   width={1080}
                   height={1080}
                   className="object-cover w-full h-full"
@@ -51,19 +54,20 @@ export default function Weddings() {
               </ScrollReveal>
             </div>
 
-            <div className="aspect-square w-full flex justify-center hidden lg:flex">
+            {/* Groom Image */}
+            <div className="aspect-square w-full justify-center hidden lg:flex">
               <ScrollReveal
                 variants={{
                   hidden: { opacity: 0, x: 200 },
                   visible: {
                     opacity: 1,
-                    x: 1,
+                    x: 0,
                     transition: { duration: 0.5, delay: 0.4 },
                   },
                 }}
               >
                 <Image
-                  src={"/images/pages/weddings/groom.jpg"}
+                  src="/images/pages/weddings/groom.jpg"
                   width={1080}
                   height={1080}
                   className="object-cover w-full lg:h-full"
@@ -73,12 +77,13 @@ export default function Weddings() {
             </div>
           </div>
 
+          {/* Header Section */}
           <ScrollReveal
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: {
                 opacity: 1,
-                y: 1,
+                y: 0,
                 transition: { duration: 0.5, delay: 0.4 },
               },
             }}
@@ -94,24 +99,25 @@ export default function Weddings() {
                 Overlooking the Serene Beauty of our Enchanting Cliffside Venue.
               </p>
             </div>
-
-            <div className="relative inset-0 flex flex-col justify-center items-center text-center pt-10 px-4 md:px-8">
-              <p className="text-sm md:text-base text-gray-700 dark:text-gray-400 max-w-3xl">
-                Email us at{" "}
-                <Link
-                  href={
-                    "mailto:coco.mountain@yahoo.com?subject=Subject%20Here&body=Body%20Text%20Here"
-                  }
-                  className="underline"
-                >
-                  coco.mountain@yahoo.com
-                </Link>{" "}
-                and let Coco Mountain Resort make your celebration of love truly
-                magical, unforgettable, and an experience that will be cherished
-                forever.
-              </p>
-            </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Email Section */}
+      <section className="py-4">
+        <div className="relative inset-0 flex flex-col justify-center items-center text-center px-4 md:px-8">
+          <p className="text-sm md:text-base text-gray-700 dark:text-gray-400 max-w-3xl">
+            Email us at{" "}
+            <Link
+              href="mailto:coco.mountain@yahoo.com?subject=Wedding Inquiry"
+              className="underline"
+            >
+              coco.mountain@yahoo.com
+            </Link>{" "}
+            and let Coco Mountain Resort make your celebration of love truly
+            magical, unforgettable, and an experience that will be cherished
+            forever.
+          </p>
         </div>
       </section>
 
@@ -137,70 +143,37 @@ export default function Weddings() {
 
             <form action="#" className="mx-auto mb-0 mt-8 max-w-lg space-y-4">
               <div className="grid grid-cols-1 gap-7">
+                {/* Name Fields */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-2">
-                  <label htmlFor="firstName" className="relative block">
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                      placeholder="Firstname"
-                    />
-
-                    <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                      First Name <span className="text-xs">{"(required)"}</span>
-                    </span>
-                  </label>
-
-                  <label htmlFor="lastName" className="relative block">
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                      placeholder="Lastname"
-                    />
-
-                    <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                      Last Name <span className="text-xs">{"(required)"}</span>
-                    </span>
-                  </label>
+                  <InputField
+                    id="firstName"
+                    label="First Name"
+                    type="text"
+                    required
+                  />
+                  <InputField
+                    id="lastName"
+                    label="Last Name"
+                    type="text"
+                    required
+                  />
                 </div>
 
+                {/* Email */}
+                <InputField id="email" label="Email" type="email" required />
+
+                {/* Subject */}
+                <InputField id="subject" label="Subject" type="text" required />
+
+                {/* Message */}
                 <div>
-                  <label htmlFor="email" className="relative block">
-                    <input
-                      type="text"
-                      id="email"
-                      className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                      placeholder="email"
-                    />
-
-                    <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                      Email <span className="text-xs">{"(required)"}</span>
-                    </span>
-                  </label>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="relative block">
-                    <input
-                      type="text"
-                      id="subject"
-                      className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                      placeholder="subject"
-                    />
-
-                    <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                      Subject <span className="text-xs">{"(required)"}</span>
-                    </span>
-                  </label>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="relative block">
+                  <label htmlFor="message" className="relative block">
                     <textarea
-                      id="subject"
+                      id="message"
                       rows="5"
                       className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
+                      placeholder="Message"
+                      required
                     ></textarea>
 
                     <span className="pointer-events-none absolute start-2.5 top-1/2 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
@@ -209,22 +182,14 @@ export default function Weddings() {
                   </label>
                 </div>
 
-                <div>
-                  <label htmlFor="guest" className="relative block">
-                    <input
-                      type="number"
-                      id="guest"
-                      pattern="\d*"
-                      inputMode="numeric"
-                      className="peer w-full border-x-0 border-t-0 border-b-2 border-gray-900 dark:border-gray-100 focus:border-green-600 dark:focus:border-green-400 focus:ring-0 focus:ring-b-2 focus:ring-green-600 dark:focus:ring-green-400 bg-transparent placeholder-transparent focus:outline-none"
-                      placeholder="guest"
-                    />
-
-                    <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 p-0.5 text-xs text-gray-700 dark:text-gray-300 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs">
-                      Guest <span className="text-xs">{"(required)"}</span>
-                    </span>
-                  </label>
-                </div>
+                {/* Guest Count */}
+                <InputField
+                  id="guest"
+                  label="Guest Count"
+                  type="number"
+                  required
+                  inputMode="numeric"
+                />
               </div>
 
               <div className="flex items-center justify-between">

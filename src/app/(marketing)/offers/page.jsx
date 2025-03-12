@@ -2,12 +2,14 @@ import ScrollReveal from "@/components/ui/useScrollReveal";
 import Image from "next/image";
 import OffersStatsList from "./OffersStatsList";
 import Deals from "./Deals";
+import Activities from "./Activities";
 
 export default function Offers() {
   return (
     <>
       {/* BANNER */}
       <section className="relative max-w-full h-screen isolate bg-white dark:bg-gray-900 m-0 pt-16 sm:pt-40">
+        {/* Decorative Elements */}
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -65,10 +67,10 @@ export default function Offers() {
           }}
         >
           <div className="my-5 text-center">
-            <h1 className="text-5xl font-righteous text-gray-800">
+            <h1 className="text-5xl font-righteous text-gray-800 dark:text-gray-100">
               Exclusive Resort Offers
             </h1>
-            <p className="mt-2 text-lg text-gray-600">
+            <p className="mt-2 text-lg text-gray-600 dark:text-gray-500">
               Discover tailored deals designed to make your stay unforgettable.
             </p>
           </div>
@@ -106,204 +108,7 @@ export default function Offers() {
 
       {/* ACTIVITIES */}
       <section className="max-w-full h-auto px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="EAT"
-                  src="/images/pages/offers/coco-havana-fullview.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  EAT
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Discover a dining experience like no other at Coco Havana.
-                  From vibrant flavors inspired by the tropics to expertly
-                  crafted cocktails, every moment is a celebration of taste and
-                  ambiance.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="SWIM"
-                  src="/images/pages/offers/coco-pool.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  SWIM
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Dive into crystal-clear waters and embrace the soothing
-                  sensation of the poolside experience. Perfect for relaxation
-                  or fitness.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="SLEEP"
-                  src="/images/pages/offers/coco-room.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  SLEEP
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Relax and unwind in our comfortable and serene rooms, ensuring
-                  you wake up rejuvenated and ready for the day.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="BIKE"
-                  src="/images/pages/offers/coco-bike.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  BIKE
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Explore scenic routes and enjoy a refreshing bike ride through
-                  lush landscapes. A perfect activity for the adventurous
-                  spirit.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="HIKE"
-                  src="/images/pages/offers/coco-hike.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  HIKE
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Take a hike through the mountains, immersing yourself in
-                  nature and enjoying breathtaking views that will leave you
-                  speechless.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className="flex flex-col justify-between items-center p-4 text-center h-full">
-            <ScrollReveal
-              variants={{
-                hidden: { opacity: 0, scale: 0.5 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.5, delay: 0.4 },
-                },
-              }}
-            >
-              <div className="flex justify-center items-center mb-4">
-                <Image
-                  alt="REPEAT"
-                  src="/images/pages/offers/coco-repeat.jpg"
-                  width={1080}
-                  height={1080}
-                  className="h-48 w-full object-cover sm:h-64 md:h-72 lg:h-80 rounded-lg aspect-video sm:aspect-square"
-                />
-              </div>
-              <div className="flex flex-col justify-between h-full">
-                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-                  REPEAT
-                </h3>
-                <p className="mt-3 text-gray-700 text-justify dark:text-gray-400 leading-relaxed max-w-xs sm:max-w-md md:max-w-lg flex-grow">
-                  Keep the adventure alive by repeating the cycle. There's
-                  always more to explore, more to experience, and more to enjoy.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
+        <Activities />
       </section>
     </>
   );

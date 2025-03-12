@@ -1,16 +1,32 @@
-// Async function that call the json data and revalidate every it refresh
+// Async function that calls the JSON data and revalidates every time it refreshes
 async function getStats() {
-  const res = await fetch("http://localhost:4000/homeStats", {
-    next: {
-      revalidate: 0,
-    },
-  });
-  return res.json();
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/homeStats`, {
+      next: {
+        revalidate: 60, // Revalidate every 60 seconds
+      },
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch stats");
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching stats:", error);
+    return [];
+  }
 }
 
 export default async function StatsList() {
-  // Calling the getStatsList
+  // Calling the getStats
   const stats = await getStats();
+
+  if (stats.length === 0) {
+    return (
+      <p className="text-center text-gray-500 dark:text-gray-400">
+        No stats available at the moment.
+      </p>
+    );
+  }
 
   return (
     <dl className="mg-6 grid grid-cols-1 gap-4 divide-y divide-gray-400 dark:divide-gray-100 sm:mt-8 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">

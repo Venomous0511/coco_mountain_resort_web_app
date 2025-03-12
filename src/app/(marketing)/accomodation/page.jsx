@@ -1,7 +1,7 @@
 import ScrollReveal from "@/components/ui/useScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
-import StatsList from "./AccomodationStatsList";
+import AccomodationList from "./AccomodationStatsList";
 import Cottage from "./Cottage";
 
 export default function Accomodation() {
@@ -40,7 +40,7 @@ export default function Accomodation() {
             <h2 className="text-5xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-7xl">
               Experience the Ultimate Resort Getaway
             </h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-600 dark:text-gray-300 sm:text-xl/8">
+            <p className="mt-8 text-pretty text-lg font-medium text-gray-600 dark:text-gray-300 sm:text-xl">
               Escape to paradise. Our resort offers luxurious accommodations,
               world-class amenities, and breathtaking views. Unwind with a
               variety of activities designed for relaxation and adventure.
@@ -48,7 +48,7 @@ export default function Accomodation() {
           </div>
 
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="hidden lg:grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 text-base/7 font-semibold text-gray-900 dark:text-white lg:gap-x-10">
+            <div className="hidden lg:grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 text-base font-semibold text-gray-900 dark:text-white lg:gap-x-10">
               <Link href="/accomodation">
                 Book Your Stay <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -63,7 +63,7 @@ export default function Accomodation() {
               </Link>
             </div>
 
-            <StatsList />
+            <AccomodationList />
           </div>
         </div>
       </section>
@@ -103,20 +103,19 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href="/login"
+                  href=""
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>
                 </Link>
 
-                <div className="mt-8 lg:mt-12">
-                  <Link
-                    href=""
-                    className="bg-green-700 hover:bg-green-800 text-white py-4 px-10"
-                  >
-                    Reserve
-                  </Link>
-                </div>
+                <div className="mt-8 lg:mt-12"></div>
+                <Link
+                  href="/login"
+                  className="bg-green-700 hover:bg-green-800 text-white py-4 px-10"
+                >
+                  Reserve
+                </Link>
               </div>
             </div>
           </ScrollReveal>
@@ -153,7 +152,7 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href="/login"
+                  href=""
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>
@@ -161,7 +160,7 @@ export default function Accomodation() {
 
                 <div className="mt-8 lg:mt-12">
                   <Link
-                    href=""
+                    href="/login"
                     className="bg-green-700 hover:bg-green-800 text-white py-4 px-10"
                   >
                     Reserve
@@ -202,7 +201,7 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href="/login"
+                  href=""
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>
@@ -210,7 +209,7 @@ export default function Accomodation() {
 
                 <div className="mt-8 lg:mt-12">
                   <Link
-                    href=""
+                    href="/login"
                     className="bg-green-700 hover:bg-green-800 text-white py-4 px-10"
                   >
                     Reserve
