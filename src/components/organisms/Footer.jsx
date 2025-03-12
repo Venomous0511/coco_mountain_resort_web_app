@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Weather from "@/hooks/weatherIndicator";
+import Weather from "@/components/ui/weatherIndicator";
 
 export default function Footer() {
   return (
