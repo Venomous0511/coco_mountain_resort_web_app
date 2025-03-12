@@ -103,7 +103,7 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href=""
+                  href="/NYCRoom"
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>
@@ -152,7 +152,7 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href=""
+                  href="/StandardRoom"
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>
@@ -201,7 +201,7 @@ export default function Accomodation() {
                 </p>
 
                 <Link
-                  href=""
+                  href="/Room3"
                   className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   View Details <span aria-hidden="true">&rarr;</span>

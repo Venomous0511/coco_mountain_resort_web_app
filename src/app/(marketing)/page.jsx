@@ -1,10 +1,10 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Loading from "./loading";
-import StatsList from "./(marketing)/StatsList";
-import TestimonialsList from "./(marketing)/TestimonialsList";
-import FaqsList from "./(marketing)/FaqsList";
+import Loading from "../loading";
+import StatsList from "./StatsList";
+import TestimonialsList from "./TestimonialsList";
+import FaqsList from "./FaqsList";
 import ScrollReveal from "@/components/ui/useScrollReveal";
 
 export default function Home() {
@@ -332,7 +332,7 @@ export default function Home() {
             }}
           >
             <Link
-              href="/rooms"
+              href="/accomodation"
               className="text-green-700 hover:text-green-600 font-bold"
             >
               See more →

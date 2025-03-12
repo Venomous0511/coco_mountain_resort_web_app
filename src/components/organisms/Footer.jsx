@@ -23,7 +23,9 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
               <Link
-                href="/"
+                href="/terms-and-conditions"
+                rel="noreferrer"
+                target="_blank"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Terms & Conditions
@@ -32,19 +34,12 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/"
+                href="/privacy-policy"
+                rel="noreferrer"
+                target="_blank"
                 className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
               >
                 Privacy Policy
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/"
-                className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
-              >
-                Cookies
               </Link>
             </li>
           </ul>
@@ -52,7 +47,7 @@ export default function Footer() {
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <Link
-                href="/"
+                href="https://www.facebook.com/CocoMountainResort"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -74,7 +69,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/"
+                href="https://www.instagram.com/CocoMountainResort"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -106,7 +101,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/"
+                href="https://www.x.com/"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -128,7 +123,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/"
+                href="https://www.youtube.com/"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
